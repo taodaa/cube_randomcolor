@@ -3,17 +3,26 @@
 // Math.ceil - округление вверх.
 // box[i].id - таким образом можно вывести id элемента NodeLista из цикла и.т.д
 let box = document.querySelectorAll('.icon'); 
-let boxactive = document.querySelector('.icon');
+// let boxactive = document.querySelector('.icon');
+let masiv = {};
 
-function painter(){
 
-}
-
-for(i=0; i < box.length; i++){
+let circle = setTimeout(function painter(){
+    for(i=0; i < box.length; i++){
         let math =  Math.floor(Math.random()*7);
    if(math === i){
-    console.log(i);
-    painter();l
+    masiv = (box[i]);
+    // console.log(masiv);
+    masiv.style.background = "red";
     break;
     }
+    else{
+
+    }
 }
+},5000);
+
+
+//TODO:надо правильно запустить функцию и сделать интервал, чтобы не спамило в консоль, также нужно перекрашивать обратно блок.;
+// painter();
+
