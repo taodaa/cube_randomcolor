@@ -1,11 +1,15 @@
 body {
   box-sizing: border-box;
   width: 100%;
+  height: 935px;
+  display: flex;
+  background: #453554;
 }
 body main {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 body main .container {
   display: flex;
@@ -14,13 +18,12 @@ body main .container {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 body main .container .icon {
   background-color: #9496ff;
-  margin-left: 10px;
+  margin: 20px 20px 20px 20px;
   width: 100px;
   height: 100px;
-}
-body main .container .icon .active {
-  background-color: #008000;
 }

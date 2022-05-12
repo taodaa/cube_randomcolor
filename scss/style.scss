@@ -1,11 +1,15 @@
 body {
     box-sizing: border-box;
     width: 100%;
+    height: 935px;
+    display: flex;
+    background: #453554;
 
     main {
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
 
         .container {
             display: flex;
@@ -14,16 +18,14 @@ body {
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
+            align-items: center;
+            align-content: center;
 
             .icon {
                 background-color: rgb(148, 150, 255);
-                margin-left: 10px;
+                margin: 20px 20px 20px 20px;
                 width: 100px;
                 height: 100px;
-
-                .active {
-                    background-color: #008000;
-                }
 
             }
         }

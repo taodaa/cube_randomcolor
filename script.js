@@ -8,15 +8,21 @@ let boxactive = document.querySelector('.icon');
 let box2 = document.querySelectorAll('.icon'); 
 let box = document.querySelectorAll('.icon'); 
 let masiv = {};
-let count = 1;
-
+let count = 0;
+let score = document.querySelector('.score'); 
 for(i=0; i < box.length; i++){
     console.log(box[i]);
     box[i].addEventListener('click', ()=>{
-        if(masiv.style.background === "red"){
-            console.log(count++)
+        if(masiv.style.background === "greenyellow"){
+            count += 100;
+            console.log(count+100)
+            score.innerHTML = count;
+            score.style.color = 'greenyellow'
         }
         else{
+            count-=50;
+            score.innerHTML = count;
+            score.style.color = 'white'
             console.log(";(")
         }
     });
@@ -30,25 +36,24 @@ function painter(){
    if(math === math2){
     masiv = box[i];
     // console.log(box[i].id);
-    masiv.style.background = "red";
+    masiv.style.background = 'greenyellow';
     break;
     }
 }
-if(masiv.style.background == "red"){
+if(masiv.style.background === 'greenyellow'){
     setTimeout(()=>{
         masiv.style.background = null;
-    },1000);
+    },600);
 }
 else {
     setTimeout(()=>{
         masiv.style.background = null;
-    },1000);
+    },600);
 }
 }
 
+setInterval(painter, 800);
 
-
-setInterval(painter, 1500);
 //TODO:надо правильно запустить функцию и сделать интервал, чтобы не спамило в консоль, также нужно перекрашивать обратно блок.;
 // painter();
-
+// console.log(masiv[i].forEach);
