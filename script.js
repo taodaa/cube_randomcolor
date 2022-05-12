@@ -10,7 +10,7 @@ let masiv = {};
 
 
 function painter(){
-    onclick.no
+
     for(i=0; i < box.length; i++){
         let math =  Math.floor(Math.random()*7);
         let math2 =  Math.floor(Math.random()*7);
@@ -29,7 +29,7 @@ if(masiv.style.background = "red"){
 }
 
 
-masiv.addEventListener('click', ()=>{
+boxactive.addEventListener('click', ()=>{
     var count = 0;
     if(masiv.style.background = "red"){
         console.log(count++)
