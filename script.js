@@ -5,9 +5,22 @@
 // setInterval(painter, 1000) вызывает функцию с интерваллом.
 // element.style.height = null можно удалять стиль так
 let boxactive = document.querySelector('.icon');
+let box2 = document.querySelectorAll('.icon'); 
 let box = document.querySelectorAll('.icon'); 
 let masiv = {};
+let count = 1;
 
+for(i=0; i < box.length; i++){
+    console.log(box[i]);
+    box[i].addEventListener('click', ()=>{
+        if(masiv.style.background === "red"){
+            console.log(count++)
+        }
+        else{
+            console.log(";(")
+        }
+    });
+}
 
 function painter(){
 
@@ -21,25 +34,21 @@ function painter(){
     break;
     }
 }
-if(masiv.style.background = "red"){
+if(masiv.style.background == "red"){
     setTimeout(()=>{
         masiv.style.background = null;
-    },500);
+    },1000);
+}
+else {
+    setTimeout(()=>{
+        masiv.style.background = null;
+    },1000);
 }
 }
 
 
-boxactive.addEventListener('click', ()=>{
-    var count = 0;
-    if(masiv.style.background = "red"){
-        console.log(count++)
-    }
-    else(
-        console.log(count--)
-    )
-});
 
-setInterval(painter, 1000);
+setInterval(painter, 1500);
 //TODO:надо правильно запустить функцию и сделать интервал, чтобы не спамило в консоль, также нужно перекрашивать обратно блок.;
 // painter();
 
